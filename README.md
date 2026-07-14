@@ -62,9 +62,6 @@ ClassTrack/
 │   │   ├── screens/           # 128 app screenshots for the tutorial
 │   │   └── team/              # Team member photos
 │   └── docs/                  # Graduation project PDF
-├── scripts/
-│   ├── build-tutorial-data.py # Regenerate tutorial-data.js from screen folders
-│   └── screen-copy.json       # Tutorial step titles and descriptions
 └── .github/workflows/
     └── static.yml             # GitHub Pages deployment workflow
 ```
@@ -80,16 +77,6 @@ The website includes a **128-screen interactive walkthrough** of the live ClassT
 - **24** admin desktop portal screens
 
 Select a role on the [Tutorial section](https://hosamdyab.github.io/ClassTrack/#tutorial), then navigate with **Previous / Next**, **Auto-play tour**, or arrow keys.
-
-### Regenerating tutorial data
-
-If you update screenshots in a local `All ClassTrack Screens` folder (sibling to this repo), run:
-
-```bash
-python scripts/build-tutorial-data.py
-```
-
-This copies images into `assets/images/screens/` and regenerates `assets/js/tutorial-data.js`.
 
 ---
 
