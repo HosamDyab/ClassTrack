@@ -149,9 +149,9 @@
   line-height: 1;
 }
 
-.status-pill-yes::before { content: "✓"; }
-.status-pill-no::before { content: "✕"; }
-.status-pill-neutral::before { content: "●"; }
+.status-pill-yes::before { content: "\2713"; }
+.status-pill-no::before { content: "\2715"; }
+.status-pill-neutral::before { content: "\25CF"; }
 
 .ct-highlight {
   display: inline-flex;
@@ -162,7 +162,7 @@
 }
 
 .ct-highlight::before {
-  content: "✓";
+  content: "\2713";
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -220,7 +220,7 @@
 }
 
 .pass-badge::before {
-  content: "✓";
+  content: "\2713";
   font-size: 10px;
 }
 
