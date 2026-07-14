@@ -179,6 +179,8 @@ Pushes to the `main` branch automatically deploy to GitHub Pages via [`.github/w
 
 After the first successful deployment, enable **GitHub Pages** in your repository settings (source: **GitHub Actions**) if it is not already active.
 
+If the deploy workflow fails with `Get Pages site failed`, open **Settings - Pages**, set **Build and deployment - Source** to **GitHub Actions**, save, then re-run the workflow from the **Actions** tab.
+
 ---
 
 ## License

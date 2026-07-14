@@ -1,0 +1,10 @@
+---
+description: Git commit attribution rules for ClassTrack
+alwaysApply: true
+---
+
+# Commit rules
+
+- Never add `Co-authored-by` trailers to commits.
+- Never attribute commits to Cursor or any AI tool.
+- Commits must show only the repository owner as author.
