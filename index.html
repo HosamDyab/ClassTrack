@@ -20,8 +20,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/base.css?v=3">
+  <link rel="stylesheet" href="assets/css/components.css?v=3">
 </head>
 <body>
 
@@ -661,13 +661,13 @@
               </tr>
             </thead>
             <tbody>
-              <tr><td>Student performance monitoring</td><td><span class="status-pill status-pill-no">No</span></td><td><span class="status-pill status-pill-yes">Yes</span></td><td class="hi col-classtrack"><span class="ct-highlight">Yes</span></td></tr>
-              <tr><td>QR attendance</td><td><span class="status-pill status-pill-neutral">Static QR</span></td><td><span class="status-pill status-pill-no">No</span></td><td class="hi col-classtrack"><span class="ct-highlight">10s rotating + HMAC</span></td></tr>
-              <tr><td>Face / biometric anti-fraud</td><td><span class="status-pill status-pill-no">No</span></td><td><span class="status-pill status-pill-no">No</span></td><td class="hi col-classtrack"><span class="ct-highlight">YOLOv8 + FaceNet</span></td></tr>
-              <tr><td>Offline support</td><td><span class="status-pill status-pill-no">No</span></td><td><span class="status-pill status-pill-no">No</span></td><td class="hi col-classtrack"><span class="ct-highlight">Encrypted SQLite sync</span></td></tr>
-              <tr><td>AI early warning</td><td><span class="status-pill status-pill-no">No</span></td><td><span class="status-pill status-pill-warn">Black-box ML</span></td><td class="hi col-classtrack"><span class="ct-highlight">Linear Regression (auditable)</span></td></tr>
-              <tr><td>PDF / Excel reports</td><td><span class="status-pill status-pill-warn">Limited</span></td><td><span class="status-pill status-pill-yes">Yes</span></td><td class="hi col-classtrack"><span class="ct-highlight">Full export</span></td></tr>
-              <tr><td>Role-based access (4 roles)</td><td><span class="status-pill status-pill-warn">Partial</span></td><td><span class="status-pill status-pill-no">Web only</span></td><td class="hi col-classtrack"><span class="ct-highlight">Student / T.A. / Faculty / Admin</span></td></tr>
+              <tr><td data-label="Feature">Student performance monitoring</td><td data-label="Typical QR Apps"><span class="status-pill status-pill-no">No</span></td><td data-label="Analytics Dashboards"><span class="status-pill status-pill-yes">Yes</span></td><td class="hi col-classtrack" data-label="ClassTrack"><span class="ct-highlight">Yes</span></td></tr>
+              <tr><td data-label="Feature">QR attendance</td><td data-label="Typical QR Apps"><span class="status-pill status-pill-neutral">Static QR</span></td><td data-label="Analytics Dashboards"><span class="status-pill status-pill-no">No</span></td><td class="hi col-classtrack" data-label="ClassTrack"><span class="ct-highlight">10s rotating + HMAC</span></td></tr>
+              <tr><td data-label="Feature">Face / biometric anti-fraud</td><td data-label="Typical QR Apps"><span class="status-pill status-pill-no">No</span></td><td data-label="Analytics Dashboards"><span class="status-pill status-pill-no">No</span></td><td class="hi col-classtrack" data-label="ClassTrack"><span class="ct-highlight">YOLOv8 + FaceNet</span></td></tr>
+              <tr><td data-label="Feature">Offline support</td><td data-label="Typical QR Apps"><span class="status-pill status-pill-no">No</span></td><td data-label="Analytics Dashboards"><span class="status-pill status-pill-no">No</span></td><td class="hi col-classtrack" data-label="ClassTrack"><span class="ct-highlight">Encrypted SQLite sync</span></td></tr>
+              <tr><td data-label="Feature">AI early warning</td><td data-label="Typical QR Apps"><span class="status-pill status-pill-no">No</span></td><td data-label="Analytics Dashboards"><span class="status-pill status-pill-warn">Black-box ML</span></td><td class="hi col-classtrack" data-label="ClassTrack"><span class="ct-highlight">Linear Regression (auditable)</span></td></tr>
+              <tr><td data-label="Feature">PDF / Excel reports</td><td data-label="Typical QR Apps"><span class="status-pill status-pill-warn">Limited</span></td><td data-label="Analytics Dashboards"><span class="status-pill status-pill-yes">Yes</span></td><td class="hi col-classtrack" data-label="ClassTrack"><span class="ct-highlight">Full export</span></td></tr>
+              <tr><td data-label="Feature">Role-based access (4 roles)</td><td data-label="Typical QR Apps"><span class="status-pill status-pill-warn">Partial</span></td><td data-label="Analytics Dashboards"><span class="status-pill status-pill-no">Web only</span></td><td class="hi col-classtrack" data-label="ClassTrack"><span class="ct-highlight">Student / T.A. / Faculty / Admin</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -778,12 +778,12 @@
               <tr><th>Type</th><th>What Was Tested</th><th>Result</th></tr>
             </thead>
             <tbody>
-              <tr><td>Unit Testing</td><td>47 tests, 83.2% code coverage</td><td><span class="pass-badge">PASS</span></td></tr>
-              <tr><td>Integration</td><td>App ↔ Supabase, App ↔ Flask, offline sync</td><td><span class="pass-badge">PASS</span></td></tr>
-              <tr><td>System Testing</td><td>47 test cases, 4 defects found &amp; fixed</td><td><span class="pass-badge">PASS</span></td></tr>
-              <tr><td>Performance</td><td>QR scan + face verify, 40 concurrent users</td><td><span class="pass-badge">PASS</span></td></tr>
-              <tr><td>Security</td><td>QR replay, cross-role access, impostor attempts</td><td><span class="pass-badge">Zero attacks</span></td></tr>
-              <tr><td>AI Evaluation</td><td>Face recognition + grade prediction validation</td><td><span class="pass-badge">TAR 94.3%</span></td></tr>
+              <tr><td data-label="Type">Unit Testing</td><td data-label="What Was Tested">47 tests, 83.2% code coverage</td><td data-label="Result"><span class="pass-badge">PASS</span></td></tr>
+              <tr><td data-label="Type">Integration</td><td data-label="What Was Tested">App ↔ Supabase, App ↔ Flask, offline sync</td><td data-label="Result"><span class="pass-badge">PASS</span></td></tr>
+              <tr><td data-label="Type">System Testing</td><td data-label="What Was Tested">47 test cases, 4 defects found &amp; fixed</td><td data-label="Result"><span class="pass-badge">PASS</span></td></tr>
+              <tr><td data-label="Type">Performance</td><td data-label="What Was Tested">QR scan + face verify, 40 concurrent users</td><td data-label="Result"><span class="pass-badge">PASS</span></td></tr>
+              <tr><td data-label="Type">Security</td><td data-label="What Was Tested">QR replay, cross-role access, impostor attempts</td><td data-label="Result"><span class="pass-badge">Zero attacks</span></td></tr>
+              <tr><td data-label="Type">AI Evaluation</td><td data-label="What Was Tested">Face recognition + grade prediction validation</td><td data-label="Result"><span class="pass-badge">TAR 94.3%</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -806,11 +806,11 @@
           <table class="compare-table perf-table">
             <thead><tr><th>Performance Scenario</th><th>Users</th><th>Avg (ms)</th><th>Status</th></tr></thead>
             <tbody>
-              <tr><td>QR scan + face verify (end-to-end)</td><td>100</td><td>389</td><td><span class="pass-badge">PASS</span></td></tr>
-              <tr><td>Student dashboard load</td><td>1</td><td>143</td><td><span class="pass-badge">PASS</span></td></tr>
-              <tr><td>PDF report (50-student course)</td><td>10</td><td>2341</td><td><span class="pass-badge">PASS</span></td></tr>
-              <tr><td>Offline sync (100 queued records)</td><td>1</td><td>4123</td><td><span class="pass-badge">PASS</span></td></tr>
-              <tr><td>Face recognition (30 simultaneous)</td><td>30</td><td>445</td><td><span class="pass-badge">PASS</span></td></tr>
+              <tr><td data-label="Scenario">QR scan + face verify (end-to-end)</td><td data-label="Users">100</td><td data-label="Avg (ms)">389</td><td data-label="Status"><span class="pass-badge">PASS</span></td></tr>
+              <tr><td data-label="Scenario">Student dashboard load</td><td data-label="Users">1</td><td data-label="Avg (ms)">143</td><td data-label="Status"><span class="pass-badge">PASS</span></td></tr>
+              <tr><td data-label="Scenario">PDF report (50-student course)</td><td data-label="Users">10</td><td data-label="Avg (ms)">2341</td><td data-label="Status"><span class="pass-badge">PASS</span></td></tr>
+              <tr><td data-label="Scenario">Offline sync (100 queued records)</td><td data-label="Users">1</td><td data-label="Avg (ms)">4123</td><td data-label="Status"><span class="pass-badge">PASS</span></td></tr>
+              <tr><td data-label="Scenario">Face recognition (30 simultaneous)</td><td data-label="Users">30</td><td data-label="Avg (ms)">445</td><td data-label="Status"><span class="pass-badge">PASS</span></td></tr>
             </tbody>
           </table>
         </div>

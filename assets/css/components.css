@@ -117,7 +117,10 @@
   font-weight: 800;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  white-space: nowrap;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.25;
+  max-width: 100%;
 }
 
 .status-pill-yes {
@@ -1125,14 +1128,6 @@ body.motion-ready .cursor-glow { opacity: 1; }
 
 /* responsive component tweaks */
 @media (max-width: 768px) {
-  .table-premium .compare-table th,
-  .table-premium .compare-table td {
-    padding: 12px 14px;
-    font-size: 12px;
-  }
-
-  .compare-table { min-width: min(520px, 100%); }
-
   .download-grid { grid-template-columns: 1fr; }
 
   .download-card { padding: clamp(20px, 5vw, 28px); }
@@ -1156,16 +1151,166 @@ body.motion-ready .cursor-glow { opacity: 1; }
 }
 
 @media (max-width: 560px) {
-  .table-premium { border-radius: 14px; }
-
-  .compare-table { min-width: min(480px, 100%); }
-
   .download-card h3,
   .contact-panel-copy h3 { font-size: clamp(17px, 4.5vw, 20px); }
 
   .dl-actions { flex-direction: column; }
 
   .dl-actions .btn { width: 100%; justify-content: center; }
+}
+
+/* mobile table cards - no horizontal clipping */
+@media (max-width: 720px) {
+  .table-wrap {
+    overflow: visible;
+    border: none;
+    background: transparent;
+    border-radius: 0;
+  }
+
+  .table-wrap.table-premium {
+    overflow: visible;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .table-wrap .compare-table {
+    min-width: 0;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+  }
+
+  .table-wrap thead {
+    display: none;
+  }
+
+  .table-wrap tbody,
+  .table-wrap tr,
+  .table-wrap td {
+    display: block;
+    width: 100%;
+  }
+
+  .table-wrap tbody tr {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 14px 16px;
+    box-shadow: 0 12px 28px -18px rgba(15, 27, 45, 0.18);
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .table-wrap tbody tr:hover td {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .table-wrap td {
+    display: grid;
+    grid-template-columns: minmax(0, 42%) minmax(0, 1fr);
+    gap: 10px 12px;
+    align-items: start;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(221, 227, 238, 0.85);
+    text-align: left;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .table-wrap td:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .table-wrap td::before {
+    content: attr(data-label);
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--blue-deep);
+    line-height: 1.35;
+  }
+
+  .table-wrap td:first-child {
+    display: block;
+    padding-top: 0;
+    padding-bottom: 12px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid var(--line);
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .table-wrap td:first-child::before {
+    display: none;
+  }
+
+  .table-wrap td.col-classtrack {
+    background: rgba(244, 121, 32, 0.06);
+    border-radius: 10px;
+    padding: 12px;
+    margin-top: 4px;
+    border-bottom: none;
+  }
+
+  .table-wrap td.col-classtrack::before {
+    color: var(--orange-deep);
+  }
+
+  .compare-premium .compare-table td.col-classtrack::before {
+    content: attr(data-label);
+    display: block;
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    border-radius: 0;
+    margin-bottom: 6px;
+  }
+
+  .table-wrap .status-pill,
+  .table-wrap .pass-badge,
+  .table-wrap .ct-highlight {
+    justify-self: start;
+    max-width: 100%;
+    white-space: normal;
+    text-align: left;
+  }
+
+  .perf-table td:first-child {
+    max-width: none;
+  }
+
+  .perf-table td:nth-child(2),
+  .perf-table td:nth-child(3),
+  .perf-table td:nth-child(4) {
+    text-align: left;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 960px) {
+  .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .table-wrap::after {
+    content: "Swipe to see all columns";
+    display: block;
+    margin-top: 8px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--mute);
+    text-align: center;
+  }
 }
 
 body.nav-open {
