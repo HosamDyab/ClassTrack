@@ -1131,7 +1131,7 @@ body.motion-ready .cursor-glow { opacity: 1; }
     font-size: 12px;
   }
 
-  .compare-table { min-width: 520px; }
+  .compare-table { min-width: min(520px, 100%); }
 
   .download-grid { grid-template-columns: 1fr; }
 
@@ -1144,12 +1144,21 @@ body.motion-ready .cursor-glow { opacity: 1; }
   .metric-card { padding: 18px 16px; }
 
   .dbar { padding: 14px 16px; }
+
+  .download-grid,
+  .contact-panel,
+  .predict-card,
+  .tutorial-shell,
+  .tutorial-stage {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 560px) {
   .table-premium { border-radius: 14px; }
 
-  .compare-table { min-width: 480px; }
+  .compare-table { min-width: min(480px, 100%); }
 
   .download-card h3,
   .contact-panel-copy h3 { font-size: clamp(17px, 4.5vw, 20px); }
