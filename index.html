@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ClassTrack is a mobile system for student performance monitoring and QR-based attendance. Download the Android APK and read the full graduation project PDF.">
+  <meta name="author" content="MTI University - Faculty of Computers and Artificial Intelligence">
+  <meta name="keywords" content="ClassTrack, student attendance, QR attendance, facial recognition, performance monitoring, higher education, Egypt, MTI University">
+  <meta property="og:title" content="ClassTrack - A Mobile System for Student Performance Monitoring &amp; QR-Based Attendance">
+  <meta property="og:description" content="Trustworthy attendance. Early risk detection. Built and pilot-tested at MTI University.">
+  <meta name="theme-color" content="#15376b">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=()">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests;">
+  <meta property="og:image" content="assets/images/brand/classtrack-app-icon.png">
+  <link rel="icon" href="assets/images/brand/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/images/brand/classtrack-app-icon.png">
+  <title>ClassTrack - A Mobile System for Student Performance Monitoring &amp; QR-Based Attendance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div id="progress" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="#main-content" class="brand" aria-label="ClassTrack home">
+        <img src="assets/images/brand/classtrack-app-icon.png" alt="" class="brand-logo" width="40" height="40">
+        <span class="brand-text">
+          <span class="brand-name">ClassTrack</span>
+          <span class="brand-tag">MTI University</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#abstract">Overview</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#tutorial">Tutorial</a></li>
+          <li><a href="#workflows">Workflows</a></li>
+          <li><a href="#architecture">Architecture</a></li>
+          <li><a href="#ai">AI Engine</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#limitations">Limits</a></li>
+          <li><a href="#future">Future</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#downloads">Download</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <header class="hero">
+      <div class="grid" aria-hidden="true"></div>
+      <div class="hero-orbs" aria-hidden="true">
+        <span class="orb orb-1"></span>
+        <span class="orb orb-2"></span>
+        <span class="orb orb-3"></span>
+      </div>
+      <div class="wrap hero-inner">
+        <div>
+          <div class="eyebrow">Graduation Project | <a href="https://www.mti.edu.eg/" class="text-link ext" target="_blank" rel="noopener noreferrer">MTI University</a> | 2025/2026</div>
+          <h1>Attendance you can <span>trust</span>. Risk you can <span>see</span> early.</h1>
+          <p class="project-name">ClassTrack - A Mobile System for Student Performance Monitoring &amp; QR-Based Attendance</p>
+          <p class="lede">ClassTrack is an end-to-end mobile platform designed for Egyptian universities. It replaces paper roll-calls with cryptographically expiring QR tokens verified by facial recognition, unifies grades and attendance in one secure database, and applies predictive analytics to flag at-risk students weeks before the midterm - giving faculty time to intervene when it still matters.</p>
+          <div class="tagrow">
+            <a href="https://flutter.dev" class="tag-link" target="_blank" rel="noopener noreferrer">Flutter</a>
+            <a href="https://dart.dev" class="tag-link" target="_blank" rel="noopener noreferrer">Dart</a>
+            <a href="https://supabase.com" class="tag-link" target="_blank" rel="noopener noreferrer">Supabase</a>
+            <a href="https://www.postgresql.org" class="tag-link" target="_blank" rel="noopener noreferrer">PostgreSQL</a>
+            <a href="https://flask.palletsprojects.com" class="tag-link" target="_blank" rel="noopener noreferrer">Flask REST API</a>
+            <a href="https://github.com/ultralytics/ultralytics" class="tag-link" target="_blank" rel="noopener noreferrer">YOLOv8</a>
+            <a href="https://github.com/davidsandberg/facenet" class="tag-link" target="_blank" rel="noopener noreferrer">FaceNet-512</a>
+            <span class="tag">Linear Regression</span>
+            <span class="tag">Offline-First</span>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat"><span class="hs-val">10s</span><span class="hs-lbl">Expiring QR token per session</span></div>
+            <div class="hero-stat"><span class="hs-val">Week 3</span><span class="hs-lbl">Early risk detection vs. Week 8</span></div>
+            <div class="hero-stat"><span class="hs-val">4 roles</span><span class="hs-lbl">Student | Faculty | TA | Admin</span></div>
+          </div>
+          <div class="cta-row">
+            <a href="https://drive.google.com/uc?export=download&amp;id=1TaLYGdnQyw1M7j2IPiaUg3SCQdIGWr0y" class="btn btn-primary ext" target="_blank" rel="noopener noreferrer">Download Android app</a>
+            <a href="assets/docs/ClassTrack-Graduation-Project.pdf" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Graduation project PDF</a>
+            <a href="#abstract" class="btn btn-ghost">Read overview</a>
+          </div>
+          <nav class="quick-jump" aria-label="Quick section links">
+            <a href="#downloads">Download</a>
+            <a href="#tutorial">App Tutorial</a>
+            <a href="#features">All Features</a>
+            <a href="#workflows">Workflows</a>
+            <a href="#ai">AI Engine</a>
+          </nav>
+        </div>
+
+        <aside class="hero-demo" aria-label="ClassTrack QR attendance app demo">
+          <div class="hero-app-badge">
+            <img src="assets/images/brand/classtrack-app-icon.png" alt="ClassTrack" width="52" height="52" loading="eager">
+            <div>
+              <strong>ClassTrack</strong>
+              <span>MTI · QR Attendance App</span>
+            </div>
+          </div>
+          <div class="hero-demo-glow" aria-hidden="true"></div>
+          <div class="hero-phone-wrap">
+            <div class="hero-phone phone-frame">
+              <div class="phone-screens hero-phone-screen">
+                <img
+                  src="assets/images/hero/scan-qr-demo.png"
+                  alt="ClassTrack mobile app showing Scan QR Code attendance screen with camera viewfinder and offline sync banner"
+                  class="hero-app-shot"
+                  width="319"
+                  height="600"
+                  loading="eager"
+                >
+              </div>
+            </div>
+            <ul class="hero-demo-chips" aria-label="Demo highlights">
+              <li class="hero-chip hero-chip-live"><span class="chip-dot" aria-hidden="true"></span>10s expiring token</li>
+              <li class="hero-chip hero-chip-face">FaceNet verified</li>
+              <li class="hero-chip hero-chip-sync">Offline queue sync</li>
+            </ul>
+          </div>
+          <p class="hero-demo-label">Live app screen from project implementation</p>
+        </aside>
+      </div>
+    </header>
+
+    <section id="abstract" class="abstract">
+      <div class="wrap">
+        <div class="abstract-inner reveal">
+          <div class="abstract-label">
+            <div class="eyebrow" style="margin-bottom:0;">Executive Summary</div>
+            <h2>What ClassTrack delivers</h2>
+          </div>
+          <div class="abstract-body">
+            <p>ClassTrack addresses a structural gap in Egyptian higher education: academic monitoring remains manual, fragmented, and reactive. Faculty lose hours to roll-call each semester; attendance records are vulnerable to proxy signing; and struggling students are typically identified only after the midterm - when corrective action is least effective.</p>
+            <p>Our solution integrates three capabilities into a single mobile system: <strong style="color:var(--ink);"><a href="#how" class="text-link">QR-based attendance</a></strong> secured by time-limited tokens and biometric verification; <strong style="color:var(--ink);"><a href="#architecture" class="text-link">unified performance tracking</a></strong> across assignments, quizzes, practicals, and exams; and an <strong style="color:var(--ink);"><a href="#predict" class="text-link">AI-driven early-warning engine</a></strong> that estimates final grades from partial data and surfaces at-risk students from Week 3 onward.</p>
+            <p>The system was developed following OOAD methodology at <a href="https://www.mti.edu.eg/" class="text-link ext" target="_blank" rel="noopener noreferrer">MTI University</a> (Modern University for Technology and Information), validated through 47 system test cases, and pilot-tested live during File Organization &amp; Processing practical sections with Level 2 students - receiving highly positive feedback from students and teaching assistants.</p>
+
+            <div class="section-head reveal" style="margin-top:36px; margin-bottom:20px;">
+              <div class="eyebrow">Four Functional Areas</div>
+              <h2 style="font-size:22px;">How the platform is organized.</h2>
+            </div>
+            <div class="functional-areas reveal-stagger">
+              <article class="func-area"><h4>Basic Data Maintenance</h4><p>Admin CRUD for students, faculty, T.A.s, courses, departments, and academic schedules across 19 relational tables.</p></article>
+              <article class="func-area"><h4>System Transactions</h4><p>QR attendance with face verification, grade entry, enrollment processing, section assignment, and manual overrides.</p></article>
+              <article class="func-area"><h4>Query Subsystem</h4><p>Role-based search and filter for attendance records, grade reports, performance summaries, and exportable analytics.</p></article>
+              <article class="func-area"><h4>AI Components</h4><p>YOLOv8 + FaceNet-512 face pipeline and Linear Regression grade prediction with low/moderate/high risk bands.</p></article>
+            </div>
+
+            <div class="objectives reveal-stagger" style="margin-top:28px;">
+              <article class="obj-card"><h4>O1 - Unified tracking</h4><p>Real-time integrated tracking of attendance, assignments, quizzes, and midterms in one dashboard.</p></article>
+              <article class="obj-card"><h4>O2 - Early identification</h4><p>Risk-band classification from Week 3 - five weeks before the midterm review.</p></article>
+              <article class="obj-card"><h4>O3 - Predictive analytics</h4><p>Forward-looking predicted grade for each student alongside current standing.</p></article>
+              <article class="obj-card"><h4>O4 - Correlation analysis</h4><p>Attendance-performance correlation at student, course, and institutional levels.</p></article>
+              <article class="obj-card"><h4>O5 - Decision support</h4><p>Interactive dashboards plus exportable <a href="#tutorial" class="text-link">PDF and Excel reports</a>.</p></article>
+              <article class="obj-card"><h4>O6 - Fraud-resistant attendance</h4><p>10-second HMAC QR tokens with FaceNet-512 - FAR below 0.1%.</p></article>
+              <article class="obj-card"><h4>O7 - Grade entry accuracy</h4><p>Structured entry and validated Excel/CSV import reduces transcription errors.</p></article>
+              <article class="obj-card"><h4>O8 - Offline operation</h4><p>Full offline functionality with automatic sync - 100% queue recovery verified.</p></article>
+              <article class="obj-card"><h4>O9 - Secure RBAC</h4><p>Role-based access with Supabase RLS and audit logs for all sensitive actions.</p></article>
+            </div>
+
+            <div class="section-head reveal" style="margin-top:40px; margin-bottom:20px;">
+              <div class="eyebrow">Research Questions</div>
+              <h2 style="font-size:22px;">Three questions this project answers.</h2>
+            </div>
+            <div class="rq-grid reveal-stagger">
+              <article class="rq-card"><div class="rq-id">RQ1</div><h4>Eliminate proxy attendance?</h4><p>Can QR + facial recognition achieve TAR above 90% with fraud-resistant attendance in large Egyptian lectures?</p></article>
+              <article class="rq-card"><div class="rq-id">RQ2</div><h4>Earlier at-risk detection?</h4><p>Can Linear Regression identify at-risk students in Weeks 3-4, before the Week 8 midterm?</p></article>
+              <article class="rq-card"><div class="rq-id">RQ3</div><h4>Offline reliability?</h4><p>Does Flutter + SQLite provide sufficient reliability when network uptime averages ~89% during peak hours?</p></article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">The Problem</div>
+          <h2>At most Egyptian universities, monitoring is reactive - not predictive.</h2>
+          <p>Student performance is assessed after outcomes are already determined. The data needed for early intervention is either missing, unreliable, or scattered across disconnected systems - leaving faculty without the tools to act in time.</p>
+        </div>
+        <div class="problem-grid reveal-stagger">
+          <article class="pcard">
+            <div class="num">01</div>
+            <h3>Lost teaching time</h3>
+            <p>Manual roll-call consumes 12-15 minutes per session - six to eight hours of instruction lost per course, per semester.</p>
+          </article>
+          <article class="pcard">
+            <div class="num">02</div>
+            <h3>Proxy attendance</h3>
+            <p>Paper sign-in sheets and unverified QR scans are easy to game, which makes attendance data unfit to feed any prediction.</p>
+          </article>
+          <article class="pcard">
+            <div class="num">03</div>
+            <h3>Fragmented records</h3>
+            <p>Grades, quizzes, assignments and attendance live in separate systems - the Registrar, paper logs, personal spreadsheets.</p>
+          </article>
+          <article class="pcard">
+            <div class="num">04</div>
+            <h3>Warning comes too late</h3>
+            <p>Struggling students are typically identified around Week 8, after the midterm - past the point where intervention works best.</p>
+          </article>
+        </div>
+
+        <div class="compare reveal">
+          <div class="now">
+            <h4>Today, at most universities</h4>
+            <ul>
+              <li>Attendance recorded on paper, open to proxy signing</li>
+              <li>Risk identified only after the midterm (~Week 8)</li>
+              <li>No system works once the network drops</li>
+              <li>Grades entered and re-entered by hand across sheets</li>
+            </ul>
+          </div>
+          <div class="next">
+            <h4>With ClassTrack</h4>
+            <ul>
+              <li>10-second QR token + facial verification, every scan</li>
+              <li>At-risk students flagged from Week 3</li>
+              <li>Offline-first - scans and grades sync once reconnected</li>
+              <li>Structured entry plus validated Excel bulk import</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section-alt">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">Core Capabilities</div>
+          <h2>Everything a modern academic workflow needs - in one app.</h2>
+          <p>ClassTrack is not a single-purpose attendance tool. It is a full-stack academic operations platform built for the realities of Egyptian lecture halls: unreliable connectivity, large cohorts, and the need for verifiable data.</p>
+        </div>
+        <div class="feat-grid reveal-stagger">
+          <article class="feat-card">
+            <div class="feat-icon"><span class="ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-qr"/></svg></span></div>
+            <h4>Dynamic QR attendance</h4>
+            <p>Faculty generate session-specific QR codes that refresh every 10 seconds, preventing screenshot sharing and replay attacks between students.</p>
+          </article>
+          <article class="feat-card">
+            <div class="feat-icon orange"><span class="ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-scan-face"/></svg></span></div>
+            <h4>Facial recognition gate</h4>
+            <p>Every scan triggers <a href="https://github.com/ultralytics/ultralytics" class="text-link ext" target="_blank" rel="noopener noreferrer">YOLOv8</a> face detection and FaceNet-512 embedding comparison - 94.3% true acceptance with zero false accepts in impostor testing.</p>
+          </article>
+          <article class="feat-card">
+            <div class="feat-icon"><span class="ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-brain"/></svg></span></div>
+            <h4>Grade prediction engine</h4>
+            <p>Linear Regression model (R² = 0.847) estimates final course grades from partial inputs, enabling proactive faculty outreach from Week 3. <a href="#predict" class="text-link">View model</a></p>
+          </article>
+          <article class="feat-card">
+            <div class="feat-icon orange"><span class="ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-database"/></svg></span></div>
+            <h4>Unified grade management</h4>
+            <p>Structured entry for assignments, quizzes, practicals, and exams - plus validated Excel bulk import to eliminate duplicate manual entry.</p>
+          </article>
+          <article class="feat-card">
+            <div class="feat-icon"><span class="ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-wifi-off"/></svg></span></div>
+            <h4>Offline-first architecture</h4>
+            <p>Attendance scans and grade writes queue locally in encrypted SQLite during network outages and sync automatically on reconnect - 100% recovery verified.</p>
+          </article>
+          <article class="feat-card">
+            <div class="feat-icon orange"><span class="ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-shield-check"/></svg></span></div>
+            <h4>Role-based access control</h4>
+            <p><a href="https://supabase.com/docs/guides/database/postgres/row-level-security" class="text-link ext" target="_blank" rel="noopener noreferrer">Supabase Row-Level Security</a> enforces strict data boundaries across students, faculty, teaching assistants, and administrators - zero cross-role leaks in testing.</p>
+          </article>
+        </div>
+
+        <div class="section-head reveal" style="margin-top:56px; margin-bottom:28px;">
+          <div class="eyebrow">Complete Feature Set</div>
+          <h2>Every capability from the project specification.</h2>
+          <p>ClassTrack delivers all features defined in the graduation project document - from smart attendance to institutional admin tools.</p>
+        </div>
+        <div class="full-feat-grid reveal-stagger">
+          <article class="full-feat"><div class="ff-icon ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-chart"/></svg></div><h4>Performance dashboards</h4><p>Real-time student performance views with GPA, history, and course analytics.</p><span class="ff-tag">Analytics</span></article>
+          <article class="full-feat"><div class="ff-icon ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-clipboard"/></svg></div><h4>Faculty &amp; T.A. reports</h4><p>Rich reporting with lecture/section attendance and grade statistics.</p><span class="ff-tag">Reports</span></article>
+          <article class="full-feat"><div class="ff-icon ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-building"/></svg></div><h4>Admin data management</h4><p>Consistent academic records across departments, courses, and enrollments.</p><span class="ff-tag">Admin</span></article>
+          <article class="full-feat"><div class="ff-icon ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-bell"/></svg></div><h4>Automated notifications</h4><p>Timely alerts for attendance, grades, and at-risk status changes.</p><span class="ff-tag">Alerts</span></article>
+          <article class="full-feat"><div class="ff-icon ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-shield-lock"/></svg></div><h4>HMAC QR validation</h4><p>10-second rotating tokens with cryptographic session binding.</p><span class="ff-tag">Security</span></article>
+          <article class="full-feat"><div class="ff-icon ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-scan-face"/></svg></div><h4>Liveness detection</h4><p>SMILE, BLINK, and head-turn challenges block photo replay attacks.</p><span class="ff-tag">Biometrics</span></article>
+          <article class="full-feat"><div class="ff-icon ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-pencil"/></svg></div><h4>Complete grade entry</h4><p>Midterm, quizzes, assignments, labs, mini projects, and final grades.</p><span class="ff-tag">Grades</span></article>
+          <article class="full-feat"><div class="ff-icon ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-download"/></svg></div><h4>Excel / CSV import</h4><p>Validated bulk grade upload eliminates duplicate manual entry.</p><span class="ff-tag">Import</span></article>
+          <article class="full-feat"><div class="ff-icon ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-hand"/></svg></div><h4>Manual attendance</h4><p>Faculty override for valid excuses with full audit trail.</p><span class="ff-tag">Override</span></article>
+          <article class="full-feat"><div class="ff-icon ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-search"/></svg></div><h4>Advanced search</h4><p>Role-based filters by student ID, course, date, week, and semester.</p><span class="ff-tag">Search</span></article>
+          <article class="full-feat"><div class="ff-icon ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-trending"/></svg></div><h4>Three grading modes</h4><p>With Lab, Without Lab, and Doctor-Defined adaptive formulas.</p><span class="ff-tag">Grading</span></article>
+          <article class="full-feat"><div class="ff-icon ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-file"/></svg></div><h4>PDF / Excel export</h4><p>Syncfusion PDF and Excel packages for institutional reporting.</p><span class="ff-tag">Export</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tutorial" class="tutorial-section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">Interactive App Tutorial</div>
+          <h2>Interactive tutorial - 128 app screens.</h2>
+          <p>Three role-based walkthroughs from the live ClassTrack app: <strong style="color:var(--ink);">39 student</strong> and <strong style="color:var(--ink);">65 faculty &amp; T.A.</strong> mobile screens, plus <strong style="color:var(--ink);">24 admin desktop</strong> portal screens. Select a role, then use <strong style="color:var(--ink);">Previous / Next</strong>, <strong style="color:var(--ink);">Auto-play tour</strong>, or arrow keys ← →.</p>
+        </div>
+
+        <div id="app-tutorial" class="tutorial-shell reveal">
+          <div class="tutorial-stage">
+            <div class="tutorial-roles" role="tablist" aria-label="App roles"></div>
+            <div class="tutorial-progress" aria-hidden="true"><div class="tutorial-progress-fill"></div></div>
+            <div class="tutorial-main">
+              <div class="tutorial-copy">
+                <div class="tutorial-counter">Screen 1 of 39</div>
+                <div class="tutorial-fig-label">Student · Screen 1 of 39</div>
+                <h3 class="tutorial-step-title">Smart QR Attendance Introduction</h3>
+                <p class="tutorial-step-desc">Onboarding introduces QR-based attendance - students scan codes to record presence instantly in lectures and sections.</p>
+                <div class="tutorial-step-tags"></div>
+                <div class="tutorial-controls">
+                  <button type="button" class="tutorial-prev btn-icon-left" aria-label="Previous step"><span class="ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-chevron-left"/></svg></span> Previous</button>
+                  <button type="button" class="tutorial-next btn-icon-left" aria-label="Next step">Next <span class="ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-chevron-right"/></svg></span></button>
+                  <button type="button" class="tutorial-play btn-icon-left" aria-pressed="false"><span class="ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-play"/></svg></span> Auto-play tour</button>
+                  <div class="tutorial-dots" aria-label="Step indicators"></div>
+                </div>
+              </div>
+              <div class="device-frame phone-frame">
+                <div class="desktop-chrome" aria-hidden="true">
+                  <div class="desktop-titlebar">
+                    <span class="desktop-dots"><i></i><i></i><i></i></span>
+                    <span class="desktop-title">ClassTrack Admin Portal</span>
+                  </div>
+                  <div class="desktop-urlbar">
+                    <span class="desktop-url-icon ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-lock"/></svg></span>
+                    <span class="desktop-url">classtrack.admin/dashboard</span>
+                  </div>
+                </div>
+                <div class="device-screens phone-screens">
+                  <img class="device-screen-a phone-screen-a visible" src="assets/images/screens/student/student-01.jpg" alt="Student app screen preview" loading="lazy">
+                  <img class="device-screen-b phone-screen-b" src="" alt="" loading="lazy" aria-hidden="true">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="workflows">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">System Workflows</div>
+          <h2>Six core workflows powering ClassTrack.</h2>
+          <p>Each workflow is documented in the project specification with step-by-step algorithms - from login to offline sync.</p>
+        </div>
+        <div class="workflow-grid reveal-stagger">
+          <article class="workflow-card">
+            <h4>1. Authentication &amp; Login</h4>
+            <ol>
+              <li>User submits email/ID and password</li>
+              <li>BCrypt validates against Supabase credentials</li>
+              <li>Optional biometrics via LocalAuth</li>
+              <li>Face verification if embedding exists</li>
+              <li>Session persisted with 4-hour sliding window</li>
+              <li>AuthWrapper routes to StudentView or TeacherView</li>
+            </ol>
+          </article>
+          <article class="workflow-card">
+            <h4>2. QR Token Generation (Faculty/T.A.)</h4>
+            <ol>
+              <li>Faculty starts live session - UUID created</li>
+              <li>UI ticks every 1 second</li>
+              <li>Token = sessionId + current 10s slot</li>
+              <li>QrImageView renders with error correction H</li>
+              <li>Logo overlay at ~16% with white backing</li>
+              <li>Session ends with optional PDF export</li>
+            </ol>
+          </article>
+          <article class="workflow-card">
+            <h4>3. QR Scan &amp; Validation (Student)</h4>
+            <ol>
+              <li>Camera permission and MobileScanner start</li>
+              <li>Barcode stream picks best QR candidate</li>
+              <li>Parse sessionId|slot with grace-window check</li>
+              <li>AttendanceRepository.markAttendance called</li>
+              <li>Online success shows confirmation</li>
+              <li>Network error queues to encrypted SQLite</li>
+            </ol>
+          </article>
+          <article class="workflow-card">
+            <h4>4. Face Registration (One-time)</h4>
+            <ol>
+              <li>Check face_registered_semester flag</li>
+              <li>ML Kit captures 5 guided poses</li>
+              <li>FaceEmbeddingService generates embeddings</li>
+              <li>Average and L2-normalize the 5 vectors</li>
+              <li>Save template locally and to Supabase</li>
+            </ol>
+          </article>
+          <article class="workflow-card">
+            <h4>5. Face Verification + Liveness</h4>
+            <ol>
+              <li>Random challenge: SMILE, BLINK, or head turn</li>
+              <li>ML Kit evaluates pose per frame</li>
+              <li>Capture still and compute live embedding</li>
+              <li>Cosine similarity vs saved template</li>
+              <li>Fallback to Flask /verify API if needed</li>
+              <li>Success opens ScanQRScreen after 600ms delay</li>
+            </ol>
+          </article>
+          <article class="workflow-card">
+            <h4>6. Offline Queue &amp; Sync</h4>
+            <ol>
+              <li>ConnectivityService checks network status</li>
+              <li>Offline writes go to encrypted pending table</li>
+              <li>Deduplicate by studentId + instanceId</li>
+              <li>On reconnect, FIFO queue replay starts</li>
+              <li>Success removes record; network error retries</li>
+              <li>100% sync verified after 72h offline test</li>
+            </ol>
+          </article>
+        </div>
+
+        <div class="section-head reveal" style="margin-top:56px; margin-bottom:28px;">
+          <div class="eyebrow">Functional Transactions</div>
+          <h2>Every transaction in the system.</h2>
+        </div>
+        <div class="tx-grid reveal-stagger">
+          <div class="tx-group">
+            <h4>Authentication</h4>
+            <ul>
+              <li>Login with email, ID, password, biometrics</li>
+              <li>Face verification on sensitive actions (15 min window)</li>
+              <li>Role-based routing to Student, Teacher, or Admin view</li>
+            </ul>
+          </div>
+          <div class="tx-group">
+            <h4>Attendance</h4>
+            <ul>
+              <li>Faculty generate lecture QR code</li>
+              <li>T.A. generate section QR code</li>
+              <li>Student scan lecture / section QR with face gate</li>
+              <li>Manual attendance entry by faculty</li>
+            </ul>
+          </div>
+          <div class="tx-group">
+            <h4>Grades</h4>
+            <ul>
+              <li>T.A. add section grades (midterm, quizzes, assignments, labs)</li>
+              <li>Faculty add final grades</li>
+              <li>Excel / CSV validated bulk upload</li>
+              <li>Three adaptive grading modes per course type</li>
+            </ul>
+          </div>
+          <div class="tx-group">
+            <h4>Reports &amp; Admin</h4>
+            <ul>
+              <li>Faculty / T.A. export PDF or CSV attendance reports</li>
+              <li>Student performance statistics report</li>
+              <li>Admin CRUD: students, faculty, T.A.s, courses</li>
+              <li>System audit logs (logid, log_time, actions)</li>
+            </ul>
+          </div>
+          <div class="tx-group">
+            <h4>Enrollment &amp; Scheduling</h4>
+            <ul>
+              <li>Student course enrollment and section assignment</li>
+              <li>Department, course, and timetable maintenance</li>
+              <li>Faculty lecture and T.A. section session creation</li>
+              <li>Enrollment validation before QR scan acceptance</li>
+            </ul>
+          </div>
+          <div class="tx-group">
+            <h4>Performance &amp; Alerts</h4>
+            <ul>
+              <li>At-risk prediction from attendance + grade trends</li>
+              <li>Push notifications for grades and attendance events</li>
+              <li>Student dashboard: GPA, attendance rate, risk badge</li>
+              <li>Faculty early-warning list for intervention</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">How It Works</div>
+          <h2>One scan, three layers of trust.</h2>
+          <p>Every attendance record on ClassTrack is the product of a token that expires, a face that's verified, and a database that never blocks on a missing connection.</p>
+        </div>
+        <div class="pipeline reveal-stagger">
+          <div class="pstep">
+            <div class="circ">1</div>
+            <h4>Faculty generates QR</h4>
+            <p>A session-specific token is created and refreshed every 10 seconds.</p>
+          </div>
+          <div class="pstep">
+            <div class="circ">2</div>
+            <h4>Student scans</h4>
+            <p>The app reads the live token before it can be reused or shared.</p>
+          </div>
+          <div class="pstep">
+            <div class="circ">3</div>
+            <h4>Face verified</h4>
+            <p>YOLOv8 detects the face; FaceNet-512 confirms identity in ~190ms.</p>
+          </div>
+          <div class="pstep">
+            <div class="circ">4</div>
+            <h4>Stored - online or off</h4>
+            <p>Writes go to Supabase, or queue locally in SQLite if offline.</p>
+          </div>
+          <div class="pstep">
+            <div class="circ">5</div>
+            <h4>Risk surfaces live</h4>
+            <p>Attendance feeds the prediction model on the faculty dashboard.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="architecture" class="section-alt">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">Architecture</div>
+          <h2>Four roles, one platform.</h2>
+          <p>Students, faculty, teaching assistants and administrators each get a purpose-built view over the same secured data layer.</p>
+        </div>
+        <div class="stack reveal-stagger">
+          <article class="stack-card">
+            <span class="role">Frontend</span>
+            <h4><a href="https://flutter.dev" class="text-link ext" target="_blank" rel="noopener noreferrer">Flutter</a> mobile app</h4>
+            <p>Single codebase for Android &amp; iOS. Offline-first: scanning, grading and dashboards keep working without a connection.</p>
+          </article>
+          <article class="stack-card">
+            <span class="role">Backend</span>
+            <h4><a href="https://supabase.com" class="text-link ext" target="_blank" rel="noopener noreferrer">Supabase</a> / PostgreSQL</h4>
+            <p>19 relational tables, Row-Level Security and real-time sync enforce role-based access per user type.</p>
+          </article>
+          <article class="stack-card alt">
+            <span class="role">AI Service</span>
+            <h4><a href="https://flask.palletsprojects.com" class="text-link ext" target="_blank" rel="noopener noreferrer">Flask</a> REST API</h4>
+            <p>A decoupled Python microservice runs the face-recognition and grade-prediction models, callable independently.</p>
+          </article>
+          <article class="stack-card alt">
+            <span class="role">Local Storage</span>
+            <h4>SQLite on-device</h4>
+            <p>An encrypted offline queue captures every write during an outage and replays it automatically on reconnect.</p>
+          </article>
+        </div>
+
+        <div class="section-head reveal" style="margin-top:64px; margin-bottom:32px;">
+          <div class="eyebrow">User Roles</div>
+          <h2>Purpose-built interfaces for every stakeholder.</h2>
+          <p>Each role accesses only the data and actions relevant to their responsibilities - enforced at the database layer, not just the UI.</p>
+        </div>
+        <div class="roles-grid reveal-stagger">
+          <article class="role-card">
+            <h4>Student</h4>
+            <ul>
+              <li>Scan session QR and verify identity</li>
+              <li>View personal attendance history</li>
+              <li>Track grades and course progress</li>
+              <li>Receive performance notifications</li>
+            </ul>
+          </article>
+          <article class="role-card">
+            <h4>Faculty</h4>
+            <ul>
+              <li>Generate and manage session QR codes</li>
+              <li>Enter and import grades in bulk</li>
+              <li>Monitor at-risk student dashboard</li>
+              <li>Export attendance and grade reports</li>
+            </ul>
+          </article>
+          <article class="role-card">
+            <h4>Teaching Assistant</h4>
+            <ul>
+              <li>Assist with attendance sessions</li>
+              <li>Support grade entry for assigned sections</li>
+              <li>View section-level analytics</li>
+              <li>Flag students for faculty review</li>
+            </ul>
+          </article>
+          <article class="role-card">
+            <h4>Administrator</h4>
+            <ul>
+              <li>Manage users, courses, and departments</li>
+              <li>Configure system-wide policies</li>
+              <li>Access institutional analytics</li>
+              <li>Audit logs and security reports</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="software" class="section-alt">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">Software Stack</div>
+          <h2>Built with modern, production-grade tools.</h2>
+          <p>Every layer of ClassTrack uses industry-standard frameworks documented in the project implementation chapter.</p>
+        </div>
+        <div class="stack-list reveal-stagger">
+          <article class="stack-item">
+            <h4>Frontend (Flutter / Dart)</h4>
+            <ul>
+              <li><b>IDE:</b> VS Code, Android Studio</li>
+              <li><b>State:</b> flutter_bloc, provider, equatable</li>
+              <li><b>QR:</b> qr_flutter, qr_code_scanner</li>
+              <li><b>Charts:</b> fl_chart (GPA, attendance, performance)</li>
+              <li><b>Animation:</b> Lottie / Rive (splash, scan feedback)</li>
+              <li><b>Reports:</b> syncfusion_flutter_pdf, excel package</li>
+              <li><b>Design:</b> Figma, Draw.io</li>
+            </ul>
+          </article>
+          <article class="stack-item">
+            <h4>AI Services (Flask / Python)</h4>
+            <ul>
+              <li><b>Detection:</b> YOLOv8-Face (bounding box)</li>
+              <li><b>Recognition:</b> FaceNet-512 (512-d embedding)</li>
+              <li><b>Similarity:</b> Cosine / Euclidean (τ = 0.70)</li>
+              <li><b>Prediction:</b> Linear Regression (Flask REST API)</li>
+              <li><b>Dual deploy:</b> On-device + server identical results</li>
+              <li><b>Metrics:</b> TAR 94.3%, FAR 0.08%, ~187ms latency</li>
+            </ul>
+          </article>
+          <article class="stack-item">
+            <h4>Database &amp; Offline</h4>
+            <ul>
+              <li><b>Backend:</b> Supabase (PostgreSQL)</li>
+              <li><b>Security:</b> RLS, pgcrypto, auth (email/OTP)</li>
+              <li><b>Tables:</b> 19 relational entities</li>
+              <li><b>Offline:</b> SQLite + sqflite_sqlcipher</li>
+              <li><b>Cache:</b> shared_preferences (session, role)</li>
+              <li><b>Sync:</b> Real-time + FIFO queue replay</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="section-head reveal" style="margin-top:48px; margin-bottom:24px;">
+          <div class="eyebrow">Related Works Comparison</div>
+          <h2>ClassTrack vs. existing solutions.</h2>
+          <p>Unlike prior QR-only or analytics-only systems, ClassTrack combines performance monitoring, offline attendance, and AI in one platform.</p>
+        </div>
+        <div class="table-wrap table-premium compare-premium reveal">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Typical QR Apps</th>
+                <th>Analytics Dashboards</th>
+                <th class="hi col-classtrack">ClassTrack</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Student performance monitoring</td><td><span class="status-pill status-pill-no">No</span></td><td><span class="status-pill status-pill-yes">Yes</span></td><td class="hi col-classtrack"><span class="ct-highlight">Yes</span></td></tr>
+              <tr><td>QR attendance</td><td><span class="status-pill status-pill-neutral">Static QR</span></td><td><span class="status-pill status-pill-no">No</span></td><td class="hi col-classtrack"><span class="ct-highlight">10s rotating + HMAC</span></td></tr>
+              <tr><td>Face / biometric anti-fraud</td><td><span class="status-pill status-pill-no">No</span></td><td><span class="status-pill status-pill-no">No</span></td><td class="hi col-classtrack"><span class="ct-highlight">YOLOv8 + FaceNet</span></td></tr>
+              <tr><td>Offline support</td><td><span class="status-pill status-pill-no">No</span></td><td><span class="status-pill status-pill-no">No</span></td><td class="hi col-classtrack"><span class="ct-highlight">Encrypted SQLite sync</span></td></tr>
+              <tr><td>AI early warning</td><td><span class="status-pill status-pill-no">No</span></td><td><span class="status-pill status-pill-warn">Black-box ML</span></td><td class="hi col-classtrack"><span class="ct-highlight">Linear Regression (auditable)</span></td></tr>
+              <tr><td>PDF / Excel reports</td><td><span class="status-pill status-pill-warn">Limited</span></td><td><span class="status-pill status-pill-yes">Yes</span></td><td class="hi col-classtrack"><span class="ct-highlight">Full export</span></td></tr>
+              <tr><td>Role-based access (4 roles)</td><td><span class="status-pill status-pill-warn">Partial</span></td><td><span class="status-pill status-pill-no">Web only</span></td><td class="hi col-classtrack"><span class="ct-highlight">Student / T.A. / Faculty / Admin</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="ai">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">AI Engine - Identity</div>
+          <h2>Eliminating proxy attendance with biometric verification.</h2>
+          <p>A face is converted to a 512-number fingerprint and compared by distance, not by photo - robust to lighting, angle and expression.</p>
+        </div>
+        <div class="ai-wrap">
+          <div class="reveal">
+            <div class="metric-grid">
+              <div class="metric"><div class="val"><span class="countup" data-target="94.3" data-suffix="%" data-decimals="1">0%</span></div><div class="lbl">True Acceptance Rate (TAR)</div></div>
+              <div class="metric hi"><div class="val"><span class="countup" data-target="0.08" data-suffix="%" data-decimals="2">0%</span></div><div class="lbl">False Acceptance Rate (FAR)</div></div>
+              <div class="metric"><div class="val"><span class="countup" data-target="5.7" data-suffix="%" data-decimals="1">0%</span></div><div class="lbl">False Rejection Rate (FRR)</div></div>
+              <div class="metric"><div class="val"><span class="countup" data-target="187" data-suffix="ms">0ms</span></div><div class="lbl">Inference latency (Android)</div></div>
+              <div class="metric hi"><div class="val"><span class="countup" data-target="0.988" data-decimals="3">0.000</span></div><div class="lbl">F1 Score</div></div>
+              <div class="metric hi"><div class="val"><span class="countup" data-target="0">0</span></div><div class="lbl">Photo replay attacks passed</div></div>
+            </div>
+            <div class="lighting-panel reveal">
+              <div class="lighting-panel-head">
+                <h4>TAR by lighting condition</h4>
+                <p>True Acceptance Rate across test environments</p>
+              </div>
+              <div class="distance-bar">
+                <div class="dbar-row" data-pct="97.1"><span class="lbl">Normal lighting</span><div class="dbar-track"><div class="dbar-fill" style="--target-width:97.1%"></div></div><span class="dbar-pct">97.1%</span></div>
+                <div class="dbar-row" data-pct="95.6"><span class="lbl">Side lighting</span><div class="dbar-track"><div class="dbar-fill" style="--target-width:95.6%"></div></div><span class="dbar-pct">95.6%</span></div>
+                <div class="dbar-row" data-pct="93.4"><span class="lbl">Overhead glare</span><div class="dbar-track"><div class="dbar-fill" style="--target-width:93.4%"></div></div><span class="dbar-pct">93.4%</span></div>
+                <div class="dbar-row" data-pct="88.2"><span class="lbl">Low light (&lt;50 lux)</span><div class="dbar-track"><div class="dbar-fill" style="--target-width:88.2%"></div></div><span class="dbar-pct">88.2%</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal">
+            <h3 style="font-size:18px; margin-bottom:14px; color:var(--ink);">Detection to Recognition pipeline</h3>
+            <p style="margin-bottom:10px;"><b style="color:var(--blue-deep);"><a href="https://github.com/ultralytics/ultralytics" class="text-link ext" target="_blank" rel="noopener noreferrer">YOLOv8-Face</a></b> locates the face in the frame and crops it with a safety margin.</p>
+            <p style="margin-bottom:10px;"><b style="color:var(--blue-deep);">CLAHE</b> equalizes lighting before the crop is standardized to 160×160.</p>
+            <p style="margin-bottom:10px;"><b style="color:var(--blue-deep);"><a href="https://github.com/davidsandberg/facenet" class="text-link ext" target="_blank" rel="noopener noreferrer">FaceNet-512</a></b> outputs a 512-dimensional embedding, pretrained on 3M images.</p>
+            <p><b style="color:var(--blue-deep);">Euclidean distance</b> below 0.70 against the stored database confirms identity; above it, the scan is rejected.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="predict" class="section-alt">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">AI Engine - Prediction</div>
+          <h2>An early warning, five weeks ahead of the midterm.</h2>
+          <p>A transparent Linear Regression model was chosen deliberately over black-box alternatives. Three grading modes adapt to course type: With Lab, Without Lab, and Doctor-Defined. Dual deployment on Flutter (offline) and Flask API delivers identical predictions.</p>
+        </div>
+        <div class="predict-card reveal">
+          <div class="eq equation">pred60 = <span class="k">1.0993</span> + <span class="k">1.4930</span>·A + <span class="k">0.5274</span>·Asg + <span class="k">0.5130</span>·Q + <span class="k">0.9713</span>·P + <span class="k">1.9093</span>·M</div>
+          <p style="font-size:13px; margin-top:12px; color:var(--mute);">Inputs: Attendance (10), Assignments (5), Quizzes (5), Practical (10), Midterm (20) → Predicted final exam + letter grade. Midterm contributes ~40% as strongest predictor.</p>
+          <div class="metric-grid" style="margin-top:24px; grid-template-columns:repeat(4,1fr);">
+            <div class="metric"><div class="val"><span class="countup" data-target="0.847" data-decimals="3">0.000</span></div><div class="lbl">R² (variance explained)</div></div>
+            <div class="metric"><div class="val"><span class="countup" data-target="4.23" data-decimals="2">0.00</span></div><div class="lbl">RMSE (out of 100)</div></div>
+            <div class="metric hi"><div class="val"><span class="countup" data-target="92" data-suffix="%">0%</span></div><div class="lbl">Within ±1 letter grade</div></div>
+            <div class="metric hi"><div class="val"><span class="countup" data-target="12" data-suffix="k">0k</span></div><div class="lbl">Training samples</div></div>
+          </div>
+          <div class="weeks-line"></div>
+          <div class="weeks">
+            <div class="week"><span>WEEK 1</span><b>No data yet</b></div>
+            <div class="week now"><span>WEEK 3</span><b style="color:var(--orange-deep);">ClassTrack flags risk</b></div>
+            <div class="week"><span>WEEK 5</span><b>Faculty intervenes</b></div>
+            <div class="week mid"><span>WEEK 8</span><b style="color:var(--mute);">Traditional midterm</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="results">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">Validation &amp; Testing</div>
+          <h2>Tested in a real lecture, not just a lab.</h2>
+          <p>Beyond unit and integration testing, ClassTrack underwent rigorous security auditing and a live UAT pilot during <strong style="color:var(--ink);">File Organization &amp; Processing</strong> practical sections at <a href="https://www.mti.edu.eg/" class="text-link ext" target="_blank" rel="noopener noreferrer">MTI</a> - supervised by Prof. Dr. Hanafy Mahmoud Ismail with T.A. Gina Hamdy and assistants. Every enrolled student scanned, passed face verification, and had attendance recorded in under the time of a manual roll-call.</p>
+        </div>
+        <div class="result-grid reveal-stagger">
+          <div class="rcard">
+            <div class="big"><span class="countup" data-target="47" data-suffix=" / 47">0 / 47</span></div>
+            <div class="sm">System test cases passed</div>
+          </div>
+          <div class="rcard orange">
+            <div class="big"><span class="countup" data-target="0">0</span></div>
+            <div class="sm">Cross-role data leaks in security testing</div>
+          </div>
+          <div class="rcard">
+            <div class="big"><span class="countup" data-target="100" data-suffix="%">0%</span></div>
+            <div class="sm">Records synced after 72h offline queue test</div>
+          </div>
+          <div class="rcard orange">
+            <div class="big"><span class="countup" data-target="83.2" data-suffix="%" data-decimals="1">0%</span></div>
+            <div class="sm">Unit test code coverage (47 tests)</div>
+          </div>
+        </div>
+
+        <div class="section-head reveal" style="margin-top:48px; margin-bottom:24px;">
+          <div class="eyebrow">Testing Types Performed</div>
+          <h2>Comprehensive validation across six test categories.</h2>
+        </div>
+        <div class="table-wrap table-premium reveal" style="margin-bottom:32px;">
+          <table class="compare-table">
+            <thead>
+              <tr><th>Type</th><th>What Was Tested</th><th>Result</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Unit Testing</td><td>47 tests, 83.2% code coverage</td><td><span class="pass-badge">PASS</span></td></tr>
+              <tr><td>Integration</td><td>App ↔ Supabase, App ↔ Flask, offline sync</td><td><span class="pass-badge">PASS</span></td></tr>
+              <tr><td>System Testing</td><td>47 test cases, 4 defects found &amp; fixed</td><td><span class="pass-badge">PASS</span></td></tr>
+              <tr><td>Performance</td><td>QR scan + face verify, 40 concurrent users</td><td><span class="pass-badge">PASS</span></td></tr>
+              <tr><td>Security</td><td>QR replay, cross-role access, impostor attempts</td><td><span class="pass-badge">Zero attacks</span></td></tr>
+              <tr><td>AI Evaluation</td><td>Face recognition + grade prediction validation</td><td><span class="pass-badge">TAR 94.3%</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="test-grid reveal-stagger">
+          <article class="test-card"><h4>Valid login</h4><p>Correct credentials route user to role-specific dashboard.</p></article>
+          <article class="test-card"><h4>Invalid email</h4><p>Malformed input rejected with generic error message.</p></article>
+          <article class="test-card"><h4>SQL injection</h4><p>Parameterized queries block injection attempts.</p></article>
+          <article class="test-card"><h4>Empty fields</h4><p>Form validation prevents blank submissions.</p></article>
+          <article class="test-card"><h4>Not enrolled</h4><p>Scan rejected if student not in lecture/section.</p></article>
+          <article class="test-card"><h4>Duplicate scan</h4><p>Second scan in same session blocked with user message.</p></article>
+        </div>
+
+        <div class="section-head reveal" style="margin-top:48px; margin-bottom:24px;">
+          <div class="eyebrow">Performance Testing</div>
+          <h2>Load scenarios under concurrent users.</h2>
+          <p>End-to-end latency measured across QR scan, face verification, dashboard load, report generation, and offline sync.</p>
+        </div>
+        <div class="table-wrap table-premium perf-table-wrap reveal">
+          <table class="compare-table perf-table">
+            <thead><tr><th>Performance Scenario</th><th>Users</th><th>Avg (ms)</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>QR scan + face verify (end-to-end)</td><td>100</td><td>389</td><td><span class="pass-badge">PASS</span></td></tr>
+              <tr><td>Student dashboard load</td><td>1</td><td>143</td><td><span class="pass-badge">PASS</span></td></tr>
+              <tr><td>PDF report (50-student course)</td><td>10</td><td>2341</td><td><span class="pass-badge">PASS</span></td></tr>
+              <tr><td>Offline sync (100 queued records)</td><td>1</td><td>4123</td><td><span class="pass-badge">PASS</span></td></tr>
+              <tr><td>Face recognition (30 simultaneous)</td><td>30</td><td>445</td><td><span class="pass-badge">PASS</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="limitations">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">Limitations</div>
+          <h2>Honest boundaries of the current system.</h2>
+          <p>Acknowledged transparently in the thesis - these define the ceiling and guide future development.</p>
+        </div>
+        <div class="limit-grid reveal-stagger">
+          <article class="limit-card"><h4>Low-light conditions</h4><p>TAR drops to 82.1% below 20 lux vs 97.1% in normal lighting. CLAHE mitigates but IR camera support is planned.</p></article>
+          <article class="limit-card"><h4>Prediction ceiling</h4><p>R² = 0.847 leaves 15.3% variance from non-academic factors (mental health, employment) that academic data cannot capture.</p></article>
+          <article class="limit-card"><h4>Single institution</h4><p>Model trained on MTI grading structure. Other institutions require re-enrollment of embeddings and retraining.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="future" class="section-alt">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">Future Work</div>
+          <h2>Two-phase roadmap for institutional deployment.</h2>
+          <p>From graduation project to Egypt's primary academic monitoring platform - organized into Phase 1 (12 months) and Phase 2 (12-24 months).</p>
+        </div>
+        <div class="phase-grid reveal-stagger">
+          <article class="phase-card">
+            <h4>Phase 1 - First 12 Months</h4>
+            <ul>
+              <li>Arabic localization via Flutter i18n (most requested in UAT)</li>
+              <li>Infrared camera support for low-light recognition</li>
+              <li>Parent/guardian notification portal with student consent</li>
+              <li>Background PDF report generation with progress indicators</li>
+              <li>Extended prediction: quiz timing and assignment completion rate</li>
+            </ul>
+          </article>
+          <article class="phase-card">
+            <h4>Phase 2 - 12 to 24 Months</h4>
+            <ul>
+              <li>Federated learning across institutions without sharing raw data</li>
+              <li>Integration with Egypt's national student registry</li>
+              <li>Natural-language queries in Arabic and English for faculty</li>
+              <li>Multimodal engagement sensing beyond attendance alone</li>
+              <li>Google Play and Apple App Store public release</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="section-alt">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">The Team</div>
+          <h2>Faculty of Computers and Artificial Intelligence - Class of 2026</h2>
+          <p>Eight developers from <a href="https://www.mti.edu.eg/" class="text-link ext" target="_blank" rel="noopener noreferrer">MTI University</a>, building ClassTrack as their graduation project under academic supervision.</p>
+        </div>
+        <div class="team-grid reveal-stagger">
+          <article class="member">
+            <a href="https://www.linkedin.com/in/hosamdyab" class="member-avatar-link" target="_blank" rel="noopener noreferrer" aria-label="Hossam Khaled Bahnasy on LinkedIn">
+              <div class="avatar">
+                <img src="assets/images/team/hossam.png" alt="" loading="lazy" onerror="this.style.display='none'; this.parentElement.textContent='HK';">
+                <span class="member-linkedin ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-linkedin"/></svg></span>
+              </div>
+            </a>
+            <p>Hossam Khaled Bahnasy</p>
+          </article>
+          <article class="member">
+            <a href="https://www.linkedin.com/in/malak-magdy-9bb61a289" class="member-avatar-link" target="_blank" rel="noopener noreferrer" aria-label="Malak Magdy Zahran on LinkedIn">
+              <div class="avatar">
+                <img src="assets/images/team/malak.jpg" alt="" loading="lazy" onerror="this.style.display='none'; this.parentElement.textContent='MM';">
+                <span class="member-linkedin ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-linkedin"/></svg></span>
+              </div>
+            </a>
+            <p>Malak Magdy Zahran</p>
+          </article>
+          <article class="member">
+            <a href="https://www.linkedin.com/in/ahmed-jaber-ahmed-779360258" class="member-avatar-link" target="_blank" rel="noopener noreferrer" aria-label="Ahmed Gaber Abd El-Gawad on LinkedIn">
+              <div class="avatar">
+                <img src="assets/images/team/ahmed-jaber.jpg" alt="" loading="lazy" onerror="this.style.display='none'; this.parentElement.textContent='AG';">
+                <span class="member-linkedin ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-linkedin"/></svg></span>
+              </div>
+            </a>
+            <p>Ahmed Gaber Abd El-Gawad</p>
+          </article>
+          <article class="member">
+            <a href="https://www.linkedin.com/in/hazem-mohamed-zaki" class="member-avatar-link" target="_blank" rel="noopener noreferrer" aria-label="Hazem Mohamed Labib on LinkedIn">
+              <div class="avatar">
+                <img src="assets/images/team/hazem.png" alt="" loading="lazy" onerror="this.style.display='none'; this.parentElement.textContent='HM';">
+                <span class="member-linkedin ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-linkedin"/></svg></span>
+              </div>
+            </a>
+            <p>Hazem Mohamed Labib</p>
+          </article>
+          <article class="member">
+            <a href="https://www.linkedin.com/in/eslam-ahmed-8005512a5" class="member-avatar-link" target="_blank" rel="noopener noreferrer" aria-label="Eslam Ahmed Elsayed on LinkedIn">
+              <div class="avatar">
+                <img src="assets/images/team/eslam.png" alt="" loading="lazy" onerror="this.style.display='none'; this.parentElement.textContent='EA';">
+                <span class="member-linkedin ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-linkedin"/></svg></span>
+              </div>
+            </a>
+            <p>Eslam Ahmed Elsayed</p>
+          </article>
+          <article class="member">
+            <a href="https://www.linkedin.com/in/ahmed-awad-4b6a97383" class="member-avatar-link" target="_blank" rel="noopener noreferrer" aria-label="Ahmed Awad Hamed on LinkedIn">
+              <div class="avatar">
+                <img src="assets/images/team/awad.png" alt="" loading="lazy" onerror="this.style.display='none'; this.parentElement.textContent='AA';">
+                <span class="member-linkedin ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-linkedin"/></svg></span>
+              </div>
+            </a>
+            <p>Ahmed Awad Hamed</p>
+          </article>
+          <article class="member">
+            <a href="https://www.linkedin.com/in/abdelrahman-ayman-996b2528a" class="member-avatar-link" target="_blank" rel="noopener noreferrer" aria-label="Abd El-Rahman Ayman Khairy on LinkedIn">
+              <div class="avatar">
+                <img src="assets/images/team/ayman.png" alt="" loading="lazy" onerror="this.style.display='none'; this.parentElement.textContent='AK';">
+                <span class="member-linkedin ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-linkedin"/></svg></span>
+              </div>
+            </a>
+            <p>Abd El-Rahman Ayman Khairy</p>
+          </article>
+          <article class="member">
+            <div class="avatar">
+              <img src="assets/images/team/ehab.png" alt="Ahmed Ehab Raouf" loading="lazy" onerror="this.style.display='none'; this.parentElement.textContent='AE';">
+            </div>
+            <p>Ahmed Ehab Raouf</p>
+          </article>
+        </div>
+        <p class="supervise">Supervised by <b>Prof. Dr. Hanafy Mahmoud Ismail</b> - with T.A. Gina Hamdy, T.A. Nayra Mostafa, T.A. Bassant Ehab, T.A. Shahd Mostafa, and T.A. Esraa Salah</p>
+      </div>
+    </section>
+
+    <section id="downloads" class="section-alt">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">Downloads</div>
+          <h2>Get the Android app and full graduation document.</h2>
+          <p>Install ClassTrack on Android or read the complete thesis - Student Performance Monitoring &amp; QR-Based Attendance (final version, June 2026).</p>
+        </div>
+        <div class="download-grid reveal-stagger">
+          <article class="download-card download-card-app">
+            <img src="assets/images/brand/classtrack-app-icon.png" alt="ClassTrack app icon" class="download-app-icon" width="72" height="72" loading="lazy">
+            <h3>ClassTrack Android App</h3>
+            <p>Download the APK and install on Android. Enable <strong style="color:var(--ink);">Install from unknown sources</strong> if prompted, then open the app and sign in with your university credentials.</p>
+            <div class="dl-actions">
+              <a href="https://drive.google.com/uc?export=download&amp;id=1TaLYGdnQyw1M7j2IPiaUg3SCQdIGWr0y" class="btn btn-primary ext" target="_blank" rel="noopener noreferrer">Download APK</a>
+              <a href="https://drive.google.com/file/d/1TaLYGdnQyw1M7j2IPiaUg3SCQdIGWr0y/view?usp=drive_link" class="btn btn-ghost ext" target="_blank" rel="noopener noreferrer">Open in Google Drive</a>
+            </div>
+          </article>
+          <article class="download-card">
+            <div class="dl-icon ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-file"/></svg></div>
+            <h3>Graduation Project PDF</h3>
+            <p>Full project documentation: requirements, architecture, AI engine, testing results, app screenshots (Chapter 5), and future roadmap - MTI University, 2025/2026.</p>
+            <div class="dl-actions">
+              <a href="assets/docs/ClassTrack-Graduation-Project.pdf" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View PDF</a>
+              <a href="assets/docs/ClassTrack-Graduation-Project.pdf" class="btn btn-ghost" download="ClassTrack-Graduation-Project.pdf">Save PDF</a>
+            </div>
+          </article>
+        </div>
+
+        <div id="contact" class="contact-panel reveal">
+          <div class="contact-panel-icon ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-mail"/></svg></div>
+          <div class="contact-panel-copy">
+            <h3>Interested in purchasing ClassTrack or piloting it at your institution?</h3>
+            <p>If you would like to <strong>buy</strong> the platform or <strong>try the system</strong> on your campus, contact our team to discuss licensing, deployment, customization, and a live demo for your faculty and administrators.</p>
+            <a href="mailto:hosamdyabb@gmail.com?subject=ClassTrack%20-%20Institutional%20Inquiry" class="contact-email">hosamdyabb@gmail.com</a>
+          </div>
+          <a href="mailto:hosamdyabb@gmail.com?subject=ClassTrack%20-%20Institutional%20Inquiry" class="btn btn-primary contact-email-btn btn-icon-left">
+            <span class="ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-mail"/></svg></span>
+            Contact our team
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="closer">
+      <div class="wrap reveal">
+        <img src="assets/images/brand/classtrack-app-icon.png" alt="" class="closer-logo" width="64" height="64" loading="lazy">
+        <div class="eyebrow" style="justify-content:center; color:#ffb380;">Next Step</div>
+        <h2>Built at MTI University. Ready for wider deployment.</h2>
+        <p>ClassTrack - A Mobile System for Student Performance Monitoring &amp; QR-Based Attendance - is a working, pilot-tested platform aligned with Egypt's digital-transformation goals in higher education. We welcome the opportunity to present our findings and discuss institutional adoption. For licensing or campus pilots, email <a href="mailto:hosamdyabb@gmail.com?subject=ClassTrack%20-%20Institutional%20Inquiry" class="closer-email">hosamdyabb@gmail.com</a>.</p>
+        <div class="cta-row cta-row--center closer-cta">
+          <a href="https://drive.google.com/uc?export=download&amp;id=1TaLYGdnQyw1M7j2IPiaUg3SCQdIGWr0y" class="btn btn-primary ext" target="_blank" rel="noopener noreferrer">Download Android app</a>
+          <a href="assets/docs/ClassTrack-Graduation-Project.pdf" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Read project PDF</a>
+          <a href="#tutorial" class="btn btn-ghost">Start app tutorial</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#main-content" class="footer-logo-link" aria-label="ClassTrack home">
+            <img src="assets/images/brand/classtrack-app-icon.png" alt="ClassTrack app logo - MTI University" class="footer-logo" width="56" height="56" loading="lazy">
+          </a>
+          <div class="foot-title">ClassTrack - A Mobile System for Student Performance Monitoring &amp; QR-Based Attendance</div>
+          <p>Graduation project | <a href="https://www.mti.edu.eg/" class="text-link ext" target="_blank" rel="noopener noreferrer">MTI University</a> | Faculty of Computers and Artificial Intelligence | 2025/2026</p>
+        </div>
+        <div class="footer-col">
+          <h5>Navigate</h5>
+          <ul>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="mailto:hosamdyabb@gmail.com?subject=ClassTrack%20-%20Institutional%20Inquiry">hosamdyabb@gmail.com</a></li>
+            <li><a href="#tutorial">App Tutorial</a></li>
+            <li><a href="#workflows">Workflows</a></li>
+            <li><a href="#architecture">Architecture</a></li>
+            <li><a href="#software">Software Stack</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#future">Future Work</a></li>
+            <li><a href="#team">Team</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Downloads</h5>
+          <ul>
+            <li><a href="https://drive.google.com/uc?export=download&amp;id=1TaLYGdnQyw1M7j2IPiaUg3SCQdIGWr0y" target="_blank" rel="noopener noreferrer">Android App (APK)</a></li>
+            <li><a href="https://drive.google.com/file/d/1TaLYGdnQyw1M7j2IPiaUg3SCQdIGWr0y/view?usp=drive_link" target="_blank" rel="noopener noreferrer">APK on Google Drive</a></li>
+            <li><a href="assets/docs/ClassTrack-Graduation-Project.pdf" target="_blank" rel="noopener noreferrer">Graduation Project PDF</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Technology</h5>
+          <ul>
+            <li><a href="https://flutter.dev" target="_blank" rel="noopener noreferrer">Flutter</a></li>
+            <li><a href="https://supabase.com" target="_blank" rel="noopener noreferrer">Supabase</a></li>
+            <li><a href="https://flask.palletsprojects.com" target="_blank" rel="noopener noreferrer">Flask</a></li>
+            <li><a href="https://github.com/ultralytics/ultralytics" target="_blank" rel="noopener noreferrer">YOLOv8</a></li>
+            <li><a href="https://github.com/HosamDyab/A-Mobile-app-System-for-student-performance-monitoring-QR-code-based-Attendance/tree/the-final-version-of-our-graduation-project" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2025/2026 ClassTrack Team - MTI University</div>
+    </div>
+  </footer>
+
+  <button class="back-top" type="button" aria-label="Back to top"><span class="ui-icon" aria-hidden="true"><svg><use href="assets/icons/sprite.svg#i-arrow-up"/></svg></span></button>
+
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/tutorial-data.js"></script>
+  <script src="assets/js/tutorial.js"></script>
+</body>
+</html>
