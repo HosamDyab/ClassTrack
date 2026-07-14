@@ -1,5 +1,8 @@
-# Local build artifacts and unused legacy screenshots (not referenced by the site)
+# Legacy screenshots not used by the live site
 assets/images/archive/
+
+# Duplicate hero image (site uses scan-qr-demo.png)
+assets/images/hero/scan-qr-demo.jpg
 
 # Secrets and credentials
 .env
@@ -14,7 +17,7 @@ secrets.json
 Thumbs.db
 desktop.ini
 
-# Editor / IDE
+# Editor and IDE
 .vscode/
 .idea/
 *.swp

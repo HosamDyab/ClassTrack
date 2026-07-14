@@ -1,15 +1,31 @@
 # ClassTrack
 
-**A Mobile System for Student Performance Monitoring & QR-Based Attendance**
+**A Mobile System for Student Performance Monitoring and QR-Based Attendance**
 
 [![GitHub Pages](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-15376b?style=flat-square&logo=github)](https://hosamdyab.github.io/ClassTrack/)
 [![MTI University](https://img.shields.io/badge/University-MTI%20University-F47920?style=flat-square)](https://www.mti.edu.eg/)
 [![Academic Year](https://img.shields.io/badge/Year-2025%2F2026-blue?style=flat-square)](https://github.com/HosamDyab/ClassTrack)
 [![License](https://img.shields.io/badge/License-Academic%20Project-lightgrey?style=flat-square)](https://github.com/HosamDyab/ClassTrack)
 
-> Graduation project - Faculty of Computers and Artificial Intelligence, [MTI University](https://www.mti.edu.eg/) (Modern University for Technology and Information)
+Graduation project - Faculty of Computers and Artificial Intelligence, [MTI University](https://www.mti.edu.eg/) (Modern University for Technology and Information).
 
 ClassTrack is an end-to-end mobile platform built for Egyptian universities. It replaces paper roll-calls with **cryptographically expiring QR tokens** verified by **facial recognition**, unifies grades and attendance in one secure database, and applies **predictive analytics** to flag at-risk students weeks before the midterm.
+
+---
+
+## Table of Contents
+
+- [Live Demo](#live-demo)
+- [Key Features](#key-features)
+- [Tech Stack](#tech-stack)
+- [Repository Structure](#repository-structure)
+- [Interactive Tutorial](#interactive-tutorial)
+- [Validation and Results](#validation-and-results)
+- [Team](#team)
+- [Contact](#contact)
+- [Local Development](#local-development)
+- [Deployment](#deployment)
+- [License](#license)
 
 ---
 
@@ -17,10 +33,10 @@ ClassTrack is an end-to-end mobile platform built for Egyptian universities. It 
 
 | Resource | Link |
 |----------|------|
-| **Project website** | [hosamdyab.github.io/ClassTrack](https://hosamdyab.github.io/ClassTrack/) |
-| **Android APK** | [Download on Google Drive](https://drive.google.com/uc?export=download&id=1TaLYGdnQyw1M7j2IPiaUg3SCQdIGWr0y) |
-| **Graduation thesis (PDF)** | [ClassTrack-Graduation-Project.pdf](assets/docs/ClassTrack-Graduation-Project.pdf) |
-| **Mobile app source code** | [GitHub - Flutter project](https://github.com/HosamDyab/A-Mobile-app-System-for-student-performance-monitoring-QR-code-based-Attendance/tree/the-final-version-of-our-graduation-project) |
+| Project website | [hosamdyab.github.io/ClassTrack](https://hosamdyab.github.io/ClassTrack/) |
+| Android APK | [Download on Google Drive](https://drive.google.com/uc?export=download&id=1TaLYGdnQyw1M7j2IPiaUg3SCQdIGWr0y) |
+| Graduation thesis (PDF) | [ClassTrack-Graduation-Project.pdf](assets/docs/ClassTrack-Graduation-Project.pdf) |
+| Mobile app source code | [Flutter project on GitHub](https://github.com/HosamDyab/A-Mobile-app-System-for-student-performance-monitoring-QR-code-based-Attendance/tree/the-final-version-of-our-graduation-project) |
 
 ---
 
@@ -28,7 +44,7 @@ ClassTrack is an end-to-end mobile platform built for Egyptian universities. It 
 
 - **Dynamic QR attendance** - Session-specific tokens refresh every 10 seconds (HMAC-signed), preventing screenshot sharing and replay attacks
 - **Facial recognition gate** - YOLOv8 face detection + FaceNet-512 embedding comparison with liveness challenges (SMILE, BLINK, head turn)
-- **Grade prediction engine** - Linear Regression model (R² = 0.847) estimates final grades from partial data, enabling outreach from Week 3
+- **Grade prediction engine** - Linear Regression model (R-squared = 0.847) estimates final grades from partial data, enabling outreach from Week 3
 - **Unified grade management** - Structured entry plus validated Excel/CSV bulk import across assignments, quizzes, practicals, and exams
 - **Offline-first architecture** - Attendance and grade writes queue in encrypted SQLite and sync automatically on reconnect (100% recovery verified)
 - **Role-based access control** - Supabase Row-Level Security across students, faculty, teaching assistants, and administrators
@@ -39,11 +55,11 @@ ClassTrack is an end-to-end mobile platform built for Egyptian universities. It 
 
 | Layer | Technologies |
 |-------|--------------|
-| **Mobile app** | Flutter, Dart, BLoC, SQLite, ML Kit |
-| **Backend & database** | Supabase, PostgreSQL, Row-Level Security |
-| **AI services** | Flask REST API, YOLOv8-Face, FaceNet-512, scikit-learn |
-| **Project website** | HTML, CSS, vanilla JavaScript (this repository) |
-| **Deployment** | GitHub Pages via GitHub Actions |
+| Mobile app | Flutter, Dart, BLoC, SQLite, ML Kit |
+| Backend and database | Supabase, PostgreSQL, Row-Level Security |
+| AI services | Flask REST API, YOLOv8-Face, FaceNet-512, scikit-learn |
+| Project website | HTML, CSS, vanilla JavaScript (this repository) |
+| Deployment | GitHub Pages via GitHub Actions |
 
 ---
 
@@ -51,19 +67,37 @@ ClassTrack is an end-to-end mobile platform built for Egyptian universities. It 
 
 ```
 ClassTrack/
-├── index.html                 # Main project landing page
+├── index.html                      # Main project landing page
+├── README.md                       # Project overview and setup guide
+├── SECURITY.md                     # Security policy and reporting
+├── .nojekyll                       # GitHub Pages Jekyll bypass
 ├── assets/
-│   ├── css/                   # Site stylesheets
-│   ├── js/                    # Site logic + interactive tutorial
-│   ├── icons/                 # SVG icon sprite
+│   ├── css/
+│   │   ├── base.css                # Layout, typography, and sections
+│   │   └── components.css          # Cards, tables, and UI components
+│   ├── js/
+│   │   ├── site.js                 # Navigation, animations, and site UX
+│   │   ├── tutorial.js             # Interactive tutorial controls
+│   │   └── tutorial-data.js        # Tutorial screen metadata
+│   ├── icons/
+│   │   └── sprite.svg              # SVG icon sprite
 │   ├── images/
-│   │   ├── brand/             # Logo and favicon
-│   │   ├── hero/              # Hero section imagery
-│   │   ├── screens/           # 128 app screenshots for the tutorial
-│   │   └── team/              # Team member photos
-│   └── docs/                  # Graduation project PDF
-└── .github/workflows/
-    └── static.yml             # GitHub Pages deployment workflow
+│   │   ├── brand/                  # Logo and favicon
+│   │   ├── hero/                   # Hero section imagery
+│   │   ├── screens/                # 128 app screenshots for the tutorial
+│   │   │   ├── student/            # 39 student screens
+│   │   │   ├── faculty/            # 65 faculty and T.A. screens
+│   │   │   └── admin/              # 24 admin portal screens
+│   │   └── team/                   # Team member photos
+│   └── docs/
+│       └── ClassTrack-Graduation-Project.pdf
+├── scripts/
+│   ├── build-tutorial-data.py      # Regenerate tutorial data from screenshots
+│   ├── screen-copy.json            # Screen titles, descriptions, and tags
+│   └── README.md                   # Script usage guide
+└── .github/
+    └── workflows/
+        └── static.yml              # GitHub Pages deployment workflow
 ```
 
 ---
@@ -73,16 +107,18 @@ ClassTrack/
 The website includes a **128-screen interactive walkthrough** of the live ClassTrack app:
 
 - **39** student mobile screens
-- **65** faculty & T.A. mobile screens
+- **65** faculty and T.A. mobile screens
 - **24** admin desktop portal screens
 
 Select a role on the [Tutorial section](https://hosamdyab.github.io/ClassTrack/#tutorial), then navigate with **Previous / Next**, **Auto-play tour**, or arrow keys.
 
+To regenerate tutorial data after screenshot updates, see [scripts/README.md](scripts/README.md).
+
 ---
 
-## Validation & Results
+## Validation and Results
 
-ClassTrack was developed using OOAD methodology and validated through **47 system test cases**. A live UAT pilot ran during **File Organization & Processing** practical sections at MTI University - supervised by Prof. Dr. Hanafy Mahmoud Ismail with T.A. Gina Hamdy and assistants.
+ClassTrack was developed using OOAD methodology and validated through **47 system test cases**. A live UAT pilot ran during **File Organization and Processing** practical sections at MTI University - supervised by Prof. Dr. Hanafy Mahmoud Ismail with T.A. Gina Hamdy and assistants.
 
 | Metric | Result |
 |--------|--------|
@@ -123,7 +159,7 @@ Interested in purchasing ClassTrack or piloting it at your institution?
 
 ## Local Development
 
-No build step is required. Serve the folder with any static file server:
+No build step is required to view the site. Serve the project folder with any static file server:
 
 ```bash
 # Python
@@ -153,5 +189,5 @@ This repository contains the ClassTrack graduation project website and documenta
 
 <p align="center">
   <strong>Built at MTI University. Ready for wider deployment.</strong><br>
-  © 2025/2026 ClassTrack Team - MTI University
+  &copy; 2025/2026 ClassTrack Team - MTI University
 </p>
