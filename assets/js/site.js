@@ -51,6 +51,7 @@
     if (!navToggle || !siteNav) return;
     navToggle.setAttribute("aria-expanded", "false");
     siteNav.classList.remove("open");
+    document.body.classList.remove("nav-open");
   }
 
   function scrollToTarget(target) {
@@ -69,7 +70,12 @@
       var expanded = navToggle.getAttribute("aria-expanded") === "true";
       navToggle.setAttribute("aria-expanded", expanded ? "false" : "true");
       siteNav.classList.toggle("open", !expanded);
+      document.body.classList.toggle("nav-open", !expanded);
     });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 1100) closeMobileNav();
+    }, { passive: true });
   }
 
   navLinks.forEach(function (link) {

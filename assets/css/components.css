@@ -1122,3 +1122,44 @@ body.motion-ready .cursor-glow { opacity: 1; }
   50% { filter: brightness(1.25); }
   100% { filter: brightness(1); }
 }
+
+/* responsive component tweaks */
+@media (max-width: 768px) {
+  .table-premium .compare-table th,
+  .table-premium .compare-table td {
+    padding: 12px 14px;
+    font-size: 12px;
+  }
+
+  .compare-table { min-width: 520px; }
+
+  .download-grid { grid-template-columns: 1fr; }
+
+  .download-card { padding: clamp(20px, 5vw, 28px); }
+
+  .full-feat { padding: 18px 16px; }
+
+  .feat-card { padding: 20px 18px; }
+
+  .metric-card { padding: 18px 16px; }
+
+  .dbar { padding: 14px 16px; }
+}
+
+@media (max-width: 560px) {
+  .table-premium { border-radius: 14px; }
+
+  .compare-table { min-width: 480px; }
+
+  .download-card h3,
+  .contact-panel-copy h3 { font-size: clamp(17px, 4.5vw, 20px); }
+
+  .dl-actions { flex-direction: column; }
+
+  .dl-actions .btn { width: 100%; justify-content: center; }
+}
+
+body.nav-open {
+  overflow: hidden;
+  touch-action: none;
+}
